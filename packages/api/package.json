@@ -1,0 +1,33 @@
+{
+  "name": "@eventflow/api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "dev":     "nodemon src/index.js",
+    "start":   "node src/index.js",
+    "migrate": "node src/db/migrate.js",
+    "seed":    "node src/db/seed.js",
+    "test":    "vitest run"
+  },
+  "dependencies": {
+    "@eventflow/shared": "*",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.5",
+    "redis": "^4.6.14",
+    "socket.io": "^4.7.5",
+    "twilio": "^5.1.0",
+    "uuid": "^10.0.0",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3",
+    "vitest": "^1.6.0",
+    "supertest": "^7.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "eventflow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An open-source coordination operating system for temporary high-density environments",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev:api":      "npm run dev --workspace=packages/api",
+    "dev:operator": "npm run dev --workspace=packages/operator-app",
+    "dev:command":  "npm run dev --workspace=packages/command-app",
+    "dev":          "concurrently \"npm run dev:api\" \"npm run dev:operator\" \"npm run dev:command\"",
+    "db:migrate":   "npm run migrate --workspace=packages/api",
+    "db:seed":      "npm run seed --workspace=packages/api",
+    "test":         "npm run test --workspaces",
+    "build":        "npm run build --workspaces"
+  },
+  "devDependencies": { "concurrently": "^8.2.2" },
+  "engines": { "node": ">=20.0.0" },
+  "license": "MIT",
+  "keywords": ["event-management","crowd-safety","coordination","open-source","incident-reporting","real-time","pwa"]
+}
